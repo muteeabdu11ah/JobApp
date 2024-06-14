@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jobhub/views/common/exports.dart';
+import 'package:jobhub/views/ui/onboarding/widgets/page_one.dart';
+import 'package:jobhub/views/ui/onboarding/widgets/page_three.dart';
+import 'package:jobhub/views/ui/onboarding/widgets/page_two.dart';
 
 
 class OnBoardingScreen extends StatelessWidget {
@@ -8,9 +11,15 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ReusableText(text: "OnBoardingScreen", style: appstyle(30, Color(kDark.value), FontWeight.bold),),
-      ),
+      body: Stack(
+        children: [PageView(
+          children: [
+            PageOne(),
+            PageTwo(),
+            PageThree(),
+          ],
+        )],
+      )
     );
   }
 }
