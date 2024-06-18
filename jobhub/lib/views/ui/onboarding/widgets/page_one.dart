@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:jobhub/views/common/exports.dart';
-import 'package:jobhub/views/common/height_spacer.dart';
 
 class PageOne extends StatelessWidget {
   const PageOne({super.key});
@@ -8,29 +7,31 @@ class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: width,
-        height: hieght,
-        color: Color.fromARGB(255, 62, 88, 118),
-        child: Column(
-          children: [
-            const HeightSpacer(size: 40),
-            Image.asset('assets/images/page1.png'),
-            Column(
-              children: [
-                Text(
-                  'Stable Your \n Ability',
-                  textAlign: TextAlign.center,
-                  style: appstyle(
-                    18,
-                    Color(kLight.value),
-                    FontWeight.w500,
-                  ),
+      body: Column(
+        children: [
+          Image.asset('jobhub/assets/images/page1.png'),
+          Column(
+            children: [
+              ReusableText(
+                text: 'Stable Your \n Ability',
+                style: appstyle(
+                  18,
+                  Color(kLight.value),
+                  FontWeight.w500,
                 ),
-              ],
-            )
-          ],
-        ),
+              ),
+              Text(
+                'Stable Your \n Ability',
+                textAlign: TextAlign.center,
+                style: appstyle(
+                  18,
+                  Color(kLight.value),
+                  FontWeight.w500,
+                ),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }
