@@ -7,31 +7,36 @@ class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Image.asset('jobhub/assets/images/page1.png'),
-          Column(
-            children: [
-              ReusableText(
-                text: 'Stable Your \n Ability',
-                style: appstyle(
-                  18,
-                  Color(kLight.value),
-                  FontWeight.w500,
+      body: Container(
+        width: width,
+        height: hieght,
+        color: Color(kLightBlue.value),
+        child: Column(
+          children: [
+            Image.asset('assets/images/page1.png'),
+            Column(
+              children: [
+                ReusableText(
+                  text: 'Stable Your \n Ability',
+                  style: appstyle(
+                    18,
+                    Color(kDark.value),
+                    FontWeight.w500,
+                  ),
                 ),
-              ),
-              Text(
-                'Stable Your \n Ability',
-                textAlign: TextAlign.center,
-                style: appstyle(
-                  18,
-                  Color(kLight.value),
-                  FontWeight.w500,
+                Text(
+                  'Stable Your \n Ability',
+                  textAlign: TextAlign.center,
+                  style: appstyle(
+                    18,
+                    Color(kDark.value),
+                    FontWeight.w500,
+                  ),
                 ),
-              ),
-            ],
-          )
-        ],
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
