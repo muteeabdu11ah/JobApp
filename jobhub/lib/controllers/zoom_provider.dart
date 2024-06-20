@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_zoom_drawer/config.dart';
 
 class ZoomNotifier extends ChangeNotifier {
   int _currentIndex = 0;
@@ -9,4 +10,26 @@ class ZoomNotifier extends ChangeNotifier {
     _currentIndex = newIndex;
     notifyListeners();
   }
+
+  final zoomDrawerController = ZoomDrawerController();
+  void toggleDrawer() {
+    print("Toggle drawer");
+
+    zoomDrawerController.toggle?.call();
+    print("Toggle drawer1");
+
+    notifyListeners();
+  }
 }
+
+
+class MyDrawerController extends ChangeNotifier {
+  final zoomDrawerController = ZoomDrawerController();
+
+  void toggleDrawer() {
+    print("Toggle drawer");
+    zoomDrawerController.toggle?.call();
+    notifyListeners();
+  }
+}
+

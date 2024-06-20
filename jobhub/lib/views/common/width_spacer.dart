@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:jobhub/constants/app_constants.dart';
 
 class WidthSpacer extends StatelessWidget {
-  const WidthSpacer({super.key});
+  final double widt;
+  const WidthSpacer({super.key, required this.widt});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      width: widt,
+    );
   }
 }
