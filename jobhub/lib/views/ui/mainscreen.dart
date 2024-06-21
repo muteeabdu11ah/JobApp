@@ -9,6 +9,8 @@ import 'package:jobhub/views/ui/device_mgt/devices_info.dart';
 import 'package:jobhub/views/ui/homepage.dart';
 import 'package:provider/provider.dart';
 
+import '../common/vertical_tile.dart';
+
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -19,13 +21,13 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    return Consumer<MyDrawerController>(
+    return Consumer<ZoomNotifier>(
         builder: (BuildContext context, zoomNotifier, child) {
       return ZoomDrawer(
         controller: zoomNotifier.zoomDrawerController,
         menuScreen: DrawerScreen(
           currentIndex: (value) {
-           value  = value;
+            value = value;
           },
         ),
         mainScreen: currentscreen(),
@@ -45,7 +47,7 @@ class _MainScreenState extends State<MainScreen> {
         return HomePage();
       case 1:
         return ChatsPage();
-        
+
       case 2:
         return BookMarkPage();
       case 3:

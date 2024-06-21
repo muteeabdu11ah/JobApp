@@ -12,7 +12,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
  
   runApp(MultiProvider(providers: [
-        ChangeNotifierProvider(create: (context) => MyDrawerController()),
 
     ChangeNotifierProvider(create: (context) => OnBoardNotifier()),
     ChangeNotifierProvider(create: (context) => LoginNotifier()),

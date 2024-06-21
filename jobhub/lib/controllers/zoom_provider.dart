@@ -22,14 +22,3 @@ class ZoomNotifier extends ChangeNotifier {
   }
 }
 
-
-class MyDrawerController extends ChangeNotifier {
-  final zoomDrawerController = ZoomDrawerController();
-
-  void toggleDrawer() {
-    print("Toggle drawer");
-    zoomDrawerController.toggle?.call();
-    notifyListeners();
-  }
-}
-

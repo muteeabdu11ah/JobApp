@@ -29,43 +29,38 @@ class DrawerScreen extends StatelessWidget {
                 text: 'Home',
                 color: zoomnotifier.currentIndex == 0
                     ? Color(kLight.value)
-                    : Color(kLightGrey.value),
+                    : Color(kLightGrey.value), 
+                    function: () { zoomnotifier.currentIndex = 0; },
               ),
-              drawerItem(
+              drawerItem( function: () { zoomnotifier.currentIndex = 1; },
                 Iconss: Ionicons.chatbubbles_outline,
                 text: 'Chat',
                 color: zoomnotifier.currentIndex == 1
                     ? Color(kLight.value)
                     : Color(kLightGrey.value),
               ),
-              drawerItem(
+              drawerItem( function: () { zoomnotifier.currentIndex = 2; },
                 Iconss: Feather.bookmark,
                 text: 'BookMarks',
                 color: zoomnotifier.currentIndex == 2
                     ? Color(kLight.value)
                     : Color(kLightGrey.value),
               ),
-              drawerItem(
+              drawerItem( function: () { zoomnotifier.currentIndex = 3; },
                 Iconss: MaterialCommunityIcons.devices,
                 text: 'Device Mgmt',
                 color: zoomnotifier.currentIndex == 3
                     ? Color(kLight.value)
                     : Color(kLightGrey.value),
               ),
-              drawerItem(
+              drawerItem( function: () { zoomnotifier.currentIndex = 4; },
                 Iconss: FontAwesome5Regular.user_circle,
                 text: 'Profile',
                 color: zoomnotifier.currentIndex == 4
                     ? Color(kLight.value)
                     : Color(kLightGrey.value),
               ),
-              drawerItem(
-                Iconss: AntDesign.home,
-                text: 'home',
-                color: zoomnotifier.currentIndex == 5
-                    ? Color(kLight.value)
-                    : Color(kLightGrey.value),
-              ),
+              
             ],
           ),
         ),
